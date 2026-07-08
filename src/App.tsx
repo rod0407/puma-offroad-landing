@@ -104,7 +104,6 @@ function App() {
               
               {activeTab === 'QUIENES_SOMOS' && (
                 <div className="animate-fade-in-up">
-                  <h2 className="font-teko text-4xl md:text-6xl mb-6">NUESTRO <span className="text-puma-gold">MOTOR</span></h2>
                   <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-8">
                     Somos una escudería multidisciplinaria conformada por estudiantes apasionados por el automovilismo deportivo. No solo ensamblamos piezas; calculamos estructuras, programamos telemetría, modelamos en 3D cada componente y superamos los límites de la ingeniería para construir un vehículo capaz de soportar cualquier obstáculo.
                   </p>
@@ -208,16 +207,6 @@ function App() {
           
           <div className={`relative max-w-5xl mx-auto ${awardInView ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
             <img src="/Puma3.jpeg" alt="Tercer lugar en diseño" className="w-full rounded-xl shadow-2xl border border-puma-gold/20" />
-            
-            {/* Ajuste del texto superpuesto para que no tape la imagen en celulares */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-12 text-left rounded-xl">
-              <h3 className="font-teko text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-puma-gold drop-shadow-lg leading-none mb-1 md:mb-2">
-                3º LUGAR EN DISEÑO
-              </h3>
-              <p className="text-sm sm:text-base md:text-2xl font-bold tracking-widest text-white">
-                ALL TERRAIN 2026
-              </p>
-            </div>
           </div>
         </div>
       </section>
