@@ -65,35 +65,35 @@ function App() {
         </div>
       </div>
 
-      {/* TABS SECTION (Equipo / Visión / Miembros) */}
+{/* TABS SECTION (Equipo / Visión / Miembros) */}
       <section id="equipo" ref={aboutRef} className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           
-          {/* Imagen Fija (Lado Izquierdo) */}
-          <div className={`${aboutInView ? 'animate-fade-in-up' : 'opacity-0'} sticky top-24`} style={{ animationDelay: '0.1s' }}>
-            <img src="/Puma2.jpeg" alt="Buggy frente a Biblioteca Central UNAM" className="w-full rounded-lg shadow-[0_0_40px_rgba(197,163,101,0.15)] border border-white/10 object-cover h-[500px]" />
+          {/* Imagen Fija (Solo pegajosa en escritorio) */}
+          <div className={`${aboutInView ? 'animate-fade-in-up' : 'opacity-0'} lg:sticky lg:top-24`} style={{ animationDelay: '0.1s' }}>
+            <img src="/Puma2.jpeg" alt="Buggy frente a Biblioteca Central UNAM" className="w-full rounded-lg shadow-[0_0_40px_rgba(197,163,101,0.15)] border border-white/10 object-cover h-[300px] lg:h-[500px]" />
           </div>
 
           {/* Contenido Interactivo (Lado Derecho) */}
           <div className={`${aboutInView ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             
-            {/* Botones de Pestañas */}
-            <div className="flex gap-6 mb-8 border-b border-white/10 pb-2">
+            {/* Botones de Pestañas (flex-wrap para celular) */}
+            <div className="flex flex-wrap gap-4 md:gap-6 mb-8 border-b border-white/10 pb-2">
               <button 
                 onClick={() => setActiveTab('QUIENES_SOMOS')}
-                className={`font-teko text-2xl tracking-wide transition-all ${activeTab === 'QUIENES_SOMOS' ? 'text-puma-gold border-b-2 border-puma-gold' : 'text-gray-500 hover:text-white'}`}
+                className={`font-teko text-xl md:text-2xl tracking-wide transition-all ${activeTab === 'QUIENES_SOMOS' ? 'text-puma-gold border-b-2 border-puma-gold' : 'text-gray-500 hover:text-white'}`}
               >
                 ¿QUIÉNES SOMOS?
               </button>
               <button 
                 onClick={() => setActiveTab('VISION')}
-                className={`font-teko text-2xl tracking-wide transition-all ${activeTab === 'VISION' ? 'text-puma-gold border-b-2 border-puma-gold' : 'text-gray-500 hover:text-white'}`}
+                className={`font-teko text-xl md:text-2xl tracking-wide transition-all ${activeTab === 'VISION' ? 'text-puma-gold border-b-2 border-puma-gold' : 'text-gray-500 hover:text-white'}`}
               >
                 NUESTRA VISIÓN
               </button>
               <button 
                 onClick={() => setActiveTab('MIEMBROS')}
-                className={`font-teko text-2xl tracking-wide transition-all ${activeTab === 'MIEMBROS' ? 'text-puma-gold border-b-2 border-puma-gold' : 'text-gray-500 hover:text-white'}`}
+                className={`font-teko text-xl md:text-2xl tracking-wide transition-all ${activeTab === 'MIEMBROS' ? 'text-puma-gold border-b-2 border-puma-gold' : 'text-gray-500 hover:text-white'}`}
               >
                 MIEMBROS
               </button>
@@ -104,7 +104,8 @@ function App() {
               
               {activeTab === 'QUIENES_SOMOS' && (
                 <div className="animate-fade-in-up">
-                  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                  <h2 className="font-teko text-4xl md:text-6xl mb-6">NUESTRO <span className="text-puma-gold">MOTOR</span></h2>
+                  <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-8">
                     Somos una escudería multidisciplinaria conformada por estudiantes apasionados por el automovilismo deportivo. No solo ensamblamos piezas; calculamos estructuras, programamos telemetría, modelamos en 3D cada componente y superamos los límites de la ingeniería para construir un vehículo capaz de soportar cualquier obstáculo.
                   </p>
                   
@@ -125,8 +126,8 @@ function App() {
 
               {activeTab === 'VISION' && (
                 <div className="animate-fade-in-up">
-                  <h2 className="font-teko text-5xl md:text-6xl mb-6">MIRANDO AL <span className="text-puma-gold">FUTURO</span></h2>
-                  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                  <h2 className="font-teko text-4xl md:text-6xl mb-6">MIRANDO AL <span className="text-puma-gold">FUTURO</span></h2>
+                  <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-8">
                     Nuestra visión es consolidar a Puma Off-Road como la escudería de ingeniería más competitiva y avanzada de México. Buscamos trascender en competencias internacionales Baja SAE, demostrando que la manufactura, el talento y la innovación creados en la UNAM están a la altura de los mejores del mundo.
                   </p>
                   
@@ -142,15 +143,15 @@ function App() {
 
               {activeTab === 'MIEMBROS' && (
                 <div className="animate-fade-in-up">
-                  <h2 className="font-teko text-5xl md:text-6xl mb-6">EL <span className="text-puma-gold">TALENTO</span></h2>
-                  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                  <h2 className="font-teko text-4xl md:text-6xl mb-6">EL <span className="text-puma-gold">TALENTO</span></h2>
+                  <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-8">
                     Detrás de la máquina, hay un equipo de futuros ingenieros dedicando horas de cálculo, soldadura y programación.
                   </p>
                   
-                  <div className="grid grid-cols-2 gap-4">
-                    {/* Tarjetas de Miembros (Puedes editar estos nombres después) */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {/* Tarjetas de Miembros */}
                     <div className="flex items-center gap-4 bg-[#111] p-4 rounded-sm border border-white/5 hover:border-puma-gold/50 transition-colors">
-                      <div className="w-12 h-12 bg-puma-gold/20 rounded-full flex items-center justify-center text-puma-gold">
+                      <div className="w-12 h-12 shrink-0 bg-puma-gold/20 rounded-full flex items-center justify-center text-puma-gold">
                         <Users className="w-6 h-6" />
                       </div>
                       <div>
@@ -159,7 +160,7 @@ function App() {
                       </div>
                     </div>
                     <div className="flex items-center gap-4 bg-[#111] p-4 rounded-sm border border-white/5 hover:border-puma-gold/50 transition-colors">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white">
+                      <div className="w-12 h-12 shrink-0 bg-white/10 rounded-full flex items-center justify-center text-white">
                         <Wrench className="w-6 h-6" />
                       </div>
                       <div>
@@ -168,7 +169,7 @@ function App() {
                       </div>
                     </div>
                     <div className="flex items-center gap-4 bg-[#111] p-4 rounded-sm border border-white/5 hover:border-puma-gold/50 transition-colors">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white">
+                      <div className="w-12 h-12 shrink-0 bg-white/10 rounded-full flex items-center justify-center text-white">
                         <Cpu className="w-6 h-6" />
                       </div>
                       <div>
@@ -177,7 +178,7 @@ function App() {
                       </div>
                     </div>
                     <div className="flex items-center gap-4 bg-[#111] p-4 rounded-sm border border-white/5 hover:border-puma-gold/50 transition-colors">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white">
+                      <div className="w-12 h-12 shrink-0 bg-white/10 rounded-full flex items-center justify-center text-white">
                         <Trophy className="w-6 h-6" />
                       </div>
                       <div>
@@ -193,7 +194,7 @@ function App() {
           </div>
         </div>
       </section>
-
+      
       {/* AWARDS SECTION */}
       <section id="logros" ref={awardRef} className="py-24 bg-[#0a0a0a] border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6 text-center">
