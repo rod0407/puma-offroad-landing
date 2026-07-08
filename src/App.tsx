@@ -194,21 +194,29 @@ function App() {
           </div>
         </div>
       </section>
-      
+
       {/* AWARDS SECTION */}
-      <section id="logros" ref={awardRef} className="py-24 bg-[#0a0a0a] border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <Trophy className={`w-16 h-16 text-puma-gold mx-auto mb-6 ${awardInView ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }} />
-          <h2 className={`font-teko text-6xl text-white mb-16 ${awardInView ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-            EXCELENCIA EN <span className="text-puma-gold">COMPETICIÓN</span>
+      <section id="logros" ref={awardRef} className="py-24 bg-[#0a0a0a] border-y border-white/5 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+          <Trophy className={`w-12 h-12 md:w-16 md:h-16 text-puma-gold mx-auto mb-6 ${awardInView ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }} />
+          
+          {/* Ajuste de tamaño de texto para móviles (text-4xl) y escritorio (md:text-6xl) */}
+          <h2 className={`font-teko text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-12 md:mb-16 leading-tight ${awardInView ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+            EXCELENCIA EN <br className="sm:hidden" /> {/* Salto de línea solo en celulares muy pequeños */}
+            <span className="text-puma-gold">COMPETICIÓN</span>
           </h2>
           
           <div className={`relative max-w-5xl mx-auto ${awardInView ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
             <img src="/Puma3.jpeg" alt="Tercer lugar en diseño" className="w-full rounded-xl shadow-2xl border border-puma-gold/20" />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 md:p-12 text-left rounded-xl">
-              <h3 className="font-teko text-5xl md:text-7xl text-puma-gold drop-shadow-lg">3º LUGAR EN DISEÑO</h3>
-              <p className="text-xl md:text-2xl font-bold tracking-widest text-white">ALL TERRAIN 2026</p>
+            {/* Ajuste del texto superpuesto para que no tape la imagen en celulares */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-12 text-left rounded-xl">
+              <h3 className="font-teko text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-puma-gold drop-shadow-lg leading-none mb-1 md:mb-2">
+                3º LUGAR EN DISEÑO
+              </h3>
+              <p className="text-sm sm:text-base md:text-2xl font-bold tracking-widest text-white">
+                ALL TERRAIN 2026
+              </p>
             </div>
           </div>
         </div>
