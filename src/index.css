@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Teko:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #050505;
+  color: #F8F9FA;
+  overflow-x: hidden;
+}
+
+.font-teko {
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+}
+
+.text-puma-gold {
+  color: #C5A365;
+}
+
+.bg-puma-gold {
+  background-color: #C5A365;
+}
+
+.border-puma-gold {
+  border-color: #C5A365;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
