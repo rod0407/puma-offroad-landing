@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useInViewAnimation } from './hooks/useInViewAnimation';
 import { ChevronRight, Trophy, Cpu, Wrench, Flag, Phone, Mail, Target, Users } from 'lucide-react';
 
