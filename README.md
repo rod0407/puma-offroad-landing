@@ -1,75 +1,28 @@
-# React + TypeScript + Vite
+# 🏎️ Puma Off-Road | Escudería UNAM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-Currently, two official plugins are available:
+Proyecto sobre página web de **Puma Off-Road**, la escudería representativa de la Facultad de Ingeniería de la UNAM enfocada en el diseño, manufactura y competencia de vehículos todoterreno de alto rendimiento.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Sobre el Proyecto
 
-## React Compiler
+Este proyecto es una *Single Page Application* (SPA) diseñada para proyectar una identidad visual competitiva, moderna y de alto impacto, alineada con los estándares de la industria automotriz y el orgullo universitario. Su objetivo es dar a conocer al equipo, mostrar los logros en competencias de diseño y facilitar el contacto con posibles patrocinadores.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+###  Características Principales
 
-## Expanding the ESLint configuration
+- **Diseño Responsivo:** Adaptabilidad total desde pantallas de escritorio hasta dispositivos móviles.
+- **Animaciones al hacer Scroll:** Efectos suaves de *fade-in-up* implementados con un custom hook (`IntersectionObserver`).
+- **Navegación Dinámica:** Uso de estados en React (`useState`) para cambiar entre pestañas (*¿Quiénes somos?, Nuestra Visión, Miembros*) sin recargar la página.
+- **Marquesina Infinita (Marquee):** Animaciones CSS fluidas para destacar los pilares técnicos del equipo.
+- **Formulario de Patrocinios Funcional:** Integración con *FormSubmit* para recibir correos directamente en la bandeja de la asociación sin necesidad de un backend propio.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+##  Instalación y Uso Local
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Si deseas clonar el repositorio y correr el proyecto en tu entorno local, sigue estos pasos:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+1. Clona el repositorio:
+   ```bash
+   git clone [https://github.com/TU_USUARIO/puma-offroad-landing.git](https://github.com/TU_USUARIO/puma-offroad-landing.git)
