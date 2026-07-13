@@ -7,6 +7,8 @@
 
 Proyecto sobre página web de **Puma Off-Road**, la escudería representativa de la Facultad de Ingeniería de la UNAM enfocada en el diseño, manufactura y competencia de vehículos todoterreno de alto rendimiento.
 
+🔗 **[Ver el proyecto en vivo aquí](https://puma-offroad.vercel.app/)**
+
 ##  Sobre el Proyecto
 
 Este proyecto es una *Single Page Application* (SPA) diseñada para proyectar una identidad visual competitiva, moderna y de alto impacto, alineada con los estándares de la industria automotriz y el orgullo universitario. Su objetivo es dar a conocer al equipo, mostrar los logros en competencias de diseño y facilitar el contacto con posibles patrocinadores.
